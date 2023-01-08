@@ -19,28 +19,60 @@
             }
         }
 
-        let compSelection = getComputerChoice();
-        let playerSelection = prompt("Rock, Paper, Scissors?");
+        let computer;
+        let player;
+        let compscore = 0;
+        let playerscore = 0;
+        let compWin = "You lose!";
+        let playerWin = "You win!";
         
-        function playRound(player, computer){
+        function playRound(){
+            player = prompt("Rock, Paper, Scissors?");
+            computer = getComputerChoice();
             if(player == "Rock" && computer == "Scissors"){
-                return "You win!";
+                playerscore++;
+                return playerWin;
             }else if(player == "Rock" && computer == "Paper"){
-                return "You lose!"
+                compscore++;
+                return compWin;
             }else if( player == "Scissors" && computer == "Paper"){
-                return "You win!";
+                playerscore++;
+                return playerWin;
             }else if( player == "Scissors" && computer == "Rock"){
-                return "You lose!";
+                compscore++;
+                return compWin;
             }else if( player == "Paper" && computer == "Rock"){
-                return "You win!";
+                playerscore++;
+                return playerWin;
             }else if( player == "Paper" && computer == "Scissors"){
-                return "You lose!";
+                compscore++;
+                return compWin;
             }else{
                 return "Draw!";
             }
+            
+           
+            
         }
         
-        console.log(playRound(playerSelection, compSelection));
+        
+
+            function game(){
+                for(let i=0; i<5; i++){
+                    console.log(playRound());
+                    if(compscore == 2){
+                        alert("You lost, try again!");
+                    }else if(playerscore == 2){
+                        alert ("You win! congratulations");
+            
+                                            
+                }
+               
+                
+            }
+            }
+
+            game();
         
     </script>
     

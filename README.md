@@ -1,4 +1,4 @@
 # RockPaperScissors
 
 -First attempt of Rock Paper Scissors
--GUI will be added soon.
+-As soon as GUI is added README will be updated as well.
