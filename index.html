@@ -5,76 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <script>
-         function getComputerChoice(){
-            let randomNum = Math.floor(Math.random() * 3 + 1);
-            if(randomNum == 1){
-                return "Rock";
-            }else if(randomNum == 2){
-                return "Paper";
-            }else if(randomNum == 3){
-                return "Scissors";
-            }
-        }
-
-        let computer;
-        let player;
-        let compscore = 0;
-        let playerscore = 0;
-        let compWin = "You lose!";
-        let playerWin = "You win!";
-        
-        function playRound(){
-            player = prompt("Rock, Paper, Scissors?").toLowerCase;
-            computer = getComputerChoice();
-            if(player == "Rock" && computer == "Scissors"){
-                playerscore++;
-                return playerWin;
-            }else if(player == "Rock" && computer == "Paper"){
-                compscore++;
-                return compWin;
-            }else if( player == "Scissors" && computer == "Paper"){
-                playerscore++;
-                return playerWin;
-            }else if( player == "Scissors" && computer == "Rock"){
-                compscore++;
-                return compWin;
-            }else if( player == "Paper" && computer == "Rock"){
-                playerscore++;
-                return playerWin;
-            }else if( player == "Paper" && computer == "Scissors"){
-                compscore++;
-                return compWin;
-            }else{
-                return "Draw!";
-            }
-            
-           
-            
-        }
-        
-        
-
-            function game(){
-                for(let i=0; i<5; i++){
-                    console.log(playRound());
-                    if(compscore == 2){
-                        alert("You lost, try again!");
-                    }else if(playerscore == 2){
-                        alert ("You win! congratulations");
-            
-                                            
-                }
-               
-                
-            }
-            }
-
-            game();
-        
-    </script>
+    
+    <button>Rock</button>
+    <button>Paper</button>
+    <button>Scissors</button>
     
 </body>
 </html>
