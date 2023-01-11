@@ -27,7 +27,7 @@
         let playerWin = "You win!";
         
         function playRound(){
-            player = prompt("Rock, Paper, Scissors?");
+            player = prompt("Rock, Paper, Scissors?").toLowerCase;
             computer = getComputerChoice();
             if(player == "Rock" && computer == "Scissors"){
                 playerscore++;
