@@ -42,9 +42,6 @@ buttons.forEach((button) => {
 function playerRound(player, computer){
     if(player == 0 && computer == 1){
        alert("Hello");
-
-    }else if(player == 0 && computer == 2){
-        
     }else if(player == 0 && computer == 2){
         alert("Scissors");
     }

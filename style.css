@@ -2,6 +2,12 @@
     background-color: red;
 }
 
-button{
-    
+
+.button{
+ background-color: blue;
+ display:flex;
+ gap:20px;
+ margin-top:400px;
+ margin-left:500px;
+ 
 }
