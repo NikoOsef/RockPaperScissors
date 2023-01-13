@@ -1,8 +1,10 @@
 let playerChoice;
 let computerNum;
 let computerChoice;
-let playerScore;
-let compScore;
+let x = 0; //player Score;
+let y = 0; //computer Score;
+let playerScore = document.querySelector("#playerScore");
+let computerScore = document.querySelector("#computerScore");
 
 
     
@@ -41,9 +43,15 @@ buttons.forEach((button) => {
 
 function playerRound(player, computer){
     if(player == 0 && computer == 1){
-       alert("Hello");
+       x++;
+       playerScore.textContent = x;
     }else if(player == 0 && computer == 2){
-        alert("Scissors");
+        y++;
+        computerScore.textContent = y;
     }
+
 }
+
+
+
 
