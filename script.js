@@ -42,16 +42,31 @@ buttons.forEach((button) => {
 });
 
 function playerRound(player, computer){
-    if(player == 0 && computer == 1){
-       x++;
-       playerScore.textContent = x;
+     if(x == 3 || y == 3){
+        reset();
     }else if(player == 0 && computer == 2){
         y++;
         computerScore.textContent = y;
-    }
-
+    }else if(player == 0 && computer == 1){
+        x++;
+     }else if(player ==1 && computer == 0){
+        x++;
+     }else if(player == 1 && computer == 2){
+        y++;
+     }else if(player ==2 && computer == 0){
+        y++;
+     }else if(player == 2 && computer == 1){
+        x++;
+     }
+     playerScore.textContent = x;
+     computerScore.textContent = y;
+     
+    
+function reset(){
+   alert("Hello World");
+   y = 0;
+   x = 0;
+   playerScore.textContent = x;
+   computerScore.textContent = y;
 }
-
-
-
-
+}
