@@ -5,6 +5,7 @@ let x = 0; //player Score;
 let y = 0; //computer Score;
 let playerScore = document.querySelector("#playerScore");
 let computerScore = document.querySelector("#computerScore");
+const divs = document.querySelectorAll("div");
 
 
     
@@ -21,25 +22,21 @@ function getComputerChoice(){
 }
 
 
-
-
-
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    if(button.textContent == "Rock"){
-        playerChoice = 0;
-        }else if(button.textContent == "Paper"){
-        playerChoice = 1;
-    }else if(button.textContent == "Scissors"){
+divs.forEach(div => {
+  div.addEventListener("click", function() {
+    if (div.id === "rock") {
+      playerChoice = 0;
+    } else if (div.id === "paper") {
+      playerChoice = 1;
+      } else if(div.id === "scissors"){
         playerChoice = 2;
-    }
+      }
+
         computerChoice = getComputerChoice();
         playerRound(playerChoice, computerChoice);
   });
-  
-
 });
+
 
 function playerRound(player, computer){
      if(x == 3 || y == 3){
