@@ -1,13 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .score_Text{
     background-color: red;
 }
 
 
-.button{
- background-color: blue;
- display:flex;
- gap:20px;
- margin-top:400px;
- margin-left:500px;
- 
+
+
+.buttons{
+    background-color : #949398FF;
+    display:flex;
+    margin-top:300px;
+    
 }
