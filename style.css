@@ -3,17 +3,38 @@
     margin: 0;
     padding: 0;
 }
-
-.score_Text{
-    background-color: red;
+body{
+    background-color: white;
+    
 }
 
+img{
+    width:200px;
+    
+}
 
+.score_Text{
+    background-color: #949398FF;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:200px;
+    height:200px;
+}
+
+.score{
+    background-color: #949398FF;
+    display:flex;
+    justify-content:center;
+    gap:300px;
+    
+
+}
 
 
 .buttons{
     background-color : #949398FF;
     display:flex;
-    margin-top:300px;
-    
+    justify-content: center;
+    align-items: center;    
 }
