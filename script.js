@@ -1,3 +1,4 @@
+
 let playerChoice;
 let computerNum;
 let computerChoice;
@@ -5,7 +6,7 @@ let x = 0; //player Score;
 let y = 0; //computer Score;
 let playerScore = document.querySelector("#playerScore");
 let computerScore = document.querySelector("#computerScore");
-const divs = document.querySelectorAll("div");
+const images = document.querySelectorAll("img");
 
 
     
@@ -18,52 +19,65 @@ function getComputerChoice(){
     }else if(randomNum == 3){
         computerNum = 2; //Scissors
     }
-     return computerNum;
+    return computerNum;
 }
 
 
-divs.forEach(div => {
-  div.addEventListener("click", function() {
-    if (div.id === "rock") {
+ 
+
+images.forEach(_img => {
+  _img.addEventListener("click", function() {
+    if (_img.id === "rock") {
       playerChoice = 0;
-    } else if (div.id === "paper") {
+    } else if (_img.id === "paper") {
       playerChoice = 1;
-      } else if(div.id === "scissors"){
+      } else if(_img.id === "scissors"){
         playerChoice = 2;
       }
-
         computerChoice = getComputerChoice();
-        playerRound(playerChoice, computerChoice);
+        playRound(playerChoice, computerChoice);
+        playerScore.textContent = x;
+        computerScore.textContent = y;
+      
   });
 });
 
 
-function playerRound(player, computer){
-     if(x == 3 || y == 3){
-        reset();
-    }else if(player == 0 && computer == 2){
+
+//Play one round of rock paper scissors and keep track of score.
+
+function playRound(player, computer){
+    reset();
+
+
+    if(player == 0 && computer == 2){
         y++;
-        computerScore.textContent = y;
-    }else if(player == 0 && computer == 1){
+    }else if(player === 0 && computer === 1){
         x++;
-     }else if(player ==1 && computer == 0){
+     }else if(player === 1 && computer === 0){
         x++;
-     }else if(player == 1 && computer == 2){
+     }else if(player === 1 && computer === 2){
         y++;
-     }else if(player ==2 && computer == 0){
+     }else if(player === 2 && computer === 0){
         y++;
-     }else if(player == 2 && computer == 1){
+     }else if(player === 2 && computer === 1){
         x++;
+     }else{
+       console.log("Draw");
      }
-     playerScore.textContent = x;
-     computerScore.textContent = y;
+
      
-    
+
+    }
+
+
+//reset function to set scores to 0.
+
 function reset(){
-   alert("Hello World");
+   if(x == 3 || y == 3){
+    alert("Hello World");
    y = 0;
    x = 0;
-   playerScore.textContent = x;
-   computerScore.textContent = y;
 }
-}
+} 
+ 
