@@ -103,8 +103,18 @@ if(player == 0 && computer == 2){
 //reset function to set scores to 0.
 
 function reset(){
-   if(x == 3 || y == 3){
-    alert("Hello World");
+   if(x == 3){
+    alert("Congratulations! You've won!");
+   y = 0;
+   x = 0;
+        comp_Paper.style.cssText = "border: 3px dotted #949398FF";
+        comp_Rock.style.cssText = "border: 3px dotted #949398FF";
+        comp_Scissors.style.cssText = "border: 3px dotted #949398FF";
+        player_Paper.style.cssText = "border : 3px dotted #949398FF";
+        player_Scissors.style.cssText = "border : 3px dotted #949398FF";
+        player_Rock.style.cssText = "border: 3px dotted #949398FF";
+}else if(y == 3){
+   alert("Unfortunately, you've lost :(");
    y = 0;
    x = 0;
         comp_Paper.style.cssText = "border: 3px dotted #949398FF";
